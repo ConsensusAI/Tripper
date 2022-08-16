@@ -1,31 +1,21 @@
-.wrapper-profile {
-  all: initial;
+.profileParent {
   display: flex;
-  background-color:rgb(232, 253, 253);
-  height: 85%
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
+  font-size: medium;
 }
 
-.profile {
-  display: flex;
-  border-color: black;
-  background-color:rgb(232, 253, 253);
-  height: 97.5%;
-  width: 100%;
-  padding: 10px;
-}
-
-.profile1 {
+.profileList {
   display: flex;
   flex-direction: column;
-  background-color:rgb(232, 253, 253);
-  height: 100%;
-  width: 20%;
+  list-style: none;
+  font-size: larger;
 }
 
-.profile2 {
+.profileList2 {
   display: flex;
   flex-direction: column;
-  background-color:rgb(232, 253, 253);
-  height: 100%;
-  width: 20%;
+  list-style: none;
+  font-size: smaller;
 }

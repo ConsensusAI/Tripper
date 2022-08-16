@@ -4,40 +4,35 @@ import { ProfileEvents } from "../ProfileEvents";
 import "./Profile.css";
 
 export const Profile = () => {
-  const { plans } =
-    useContext(AppContext);
-
+  const { plans } = useContext(AppContext);
 
   return (
     <div className="wrapper-profile">
       <div className="profile">
-
-      {plans.length > 0 ? (
-        <>
-          <b>My Plans:</b>
-        </>
-      ) : (
-        <h3>No plans to show, go create a plan!</h3>
-      )}
-
-        <div className="profile1">
-          <ul>
-            <div>
-              <ol>
-                {plans.map((item) => {
-                  console.log("item:", item);
-                  return (
-                    <li key={item.id}>
-                      {item.name}
-                      <ProfileEvents key={item.id} plan_id={item.id}/>
-                    </li>
-                  );
-                })}
-              </ol>
-            </div>
-          </ul>
-        </div>
-
+        {plans.length > 0 ? (
+          <>
+            <h2><b>My Plans:</b></h2>
+          </>
+        ) : (
+          <h3>No plans to show, go create a plan!</h3>
+        )}
+        <ul>
+          <div className="profileParent">
+            {plans.map((item) => {
+              console.log("item:", item);
+              return (
+                <div className="profileList">
+                  <li key={item.id}>
+                    {item.name}
+                    <div className="profileList2">
+                    <ProfileEvents key={item.id} plan_id={item.id} />
+                    </div>
+                  </li>
+                </div>
+              );
+            })}
+          </div>
+        </ul>
       </div>
     </div>
   );

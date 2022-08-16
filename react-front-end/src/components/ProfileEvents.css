@@ -1,0 +1,11 @@
+.profileEvents {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.row-list {
+  display: flex;
+  flex-direction: row !important;
+}
