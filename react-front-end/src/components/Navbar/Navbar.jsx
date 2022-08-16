@@ -9,9 +9,9 @@ import { Button } from "@mui/material";
 const logo = require("./TripperLogo.png");
 
 export default function Navbar({ setFormData }) {
-  const clearData = () => {
-    return setFormData("");
-  };
+  // const clearData = () => {
+  //   return setFormData("");
+  // };
   const { user } = useContext(AppContext);
 
   // For presentation purposes...Demo
@@ -69,16 +69,23 @@ export default function Navbar({ setFormData }) {
 
       {username && (
         <div className="signOut">
+<<<<<<< HEAD
           <h5>Hello, {user.name}!</h5>
           <div className = "singOutProfile">
           <Link to="/profile">
             <BootstrapButton variant="contained" size="small">
               User Profile
             </BootstrapButton>
+=======
+          <h3>Hi, {user.name}</h3>
+          <Link to="/profile">
+            {/* <button>User Profile</button> */}
+>>>>>>> ccec62a1d37be8ca3d1cc963228f2ce9cc142ebc
           </Link>
           </div>
           <div className = "signOutLogOut">
           <Link to="/login">
+<<<<<<< HEAD
             <BootstrapButton
               variant="contained"
               size="small"
@@ -86,6 +93,10 @@ export default function Navbar({ setFormData }) {
             >
               Log Out
             </BootstrapButton>
+=======
+            {/* <button onClick={clearData}>Log Out</button> */}
+            <b>Logout</b>
+>>>>>>> ccec62a1d37be8ca3d1cc963228f2ce9cc142ebc
           </Link>
           </div>
         </div>

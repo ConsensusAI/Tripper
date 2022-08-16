@@ -114,6 +114,8 @@ export const AppProvider = ({ children }) => {
 
     const updatedResults = state.results.filter((res) => event.id !== res.id);
 
+    // console.log("updatedResults", updatedResults);
+
     const selectedPlan = state.selectedPlan;
 
     console.log("EVENT ADDED: ", event);

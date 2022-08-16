@@ -45,7 +45,7 @@ export const ListCategories = () => {
 
   return (
     <div>
-      <b>Categories:</b>
+      <b style={{"fontFamily":"Copperplate", "fontSize":"25px"}}>Categories:</b>
       <i className="fa-solid fa-utensils fa-2x" onClick={() => handleSubmit("food")}></i>
       <i className="fa-solid fa-masks-theater fa-2x" onClick={() => handleSubmit("museum")}></i>
       <i className="fa-solid fa-cart-shopping fa-2x" onClick={() => handleSubmit("shop")}></i>

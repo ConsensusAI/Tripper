@@ -18,60 +18,41 @@ export const ListEvents = () => {
           <>
           </>
         ) : (
-          <h4>You don't have anything planned yet =/</h4>
+          <b>You don't have anything planned yet =/</b>
         )}
       </p>
 
-      <ol>
+      <ol style={{}}>
         {events.map((item) => {
           return (
             <div className="events" key={item.id}>
               <li key={item.id}>
-                <a href={item.image} target="_blank" rel="noopener noreferrer" className="event-name">
+                <a href={item.image} target="_blank" rel="noopener noreferrer" style={{"fontSize":"20px", "fontWeight":"300"}}>
                   {item.name}
                 </a>
                   {item.done === false ? (
                   <i
                     className="fa-solid fa-check"
                     onClick={() => changeIconColor(item.id)}
-                    style={{"padding-left": "10px"}}
+                    style={{"paddingLeft": "10px"}}
                   ></i>
                 ) : (
                   <i
                     className="fa-solid fa-clock-rotate-left"
                     onClick={() => changeIconColor(item.id)}
-                    style={{"padding-left": "10px"}}
+                    style={{"paddingLeft": "10px"}}
                   ></i>
                 )}
                 <i
                   className="fa-solid fa-trash"
                   onClick={() => deleteFromMap(item.id)}
-                  style={{"padding-left": "10px"}}
+                  style={{"paddingLeft": "10px"}}
                 ></i>
                 
-                <p>{item.address}</p>
-              
+                <p>{item.address}</p>             
                 <p>
                   <img src={item.image_url} alt="" height="150px" width="150px" />
-                  {/* {item.done === false ? (
-                  <i
-                    className="fa-solid fa-check fa-2x"
-                    onClick={() => changeIconColor(item.id)}
-                  ></i>
-                ) : (
-                  <i
-                    className="fa-solid fa-clock-rotate-left fa-2x"
-                    onClick={() => changeIconColor(item.id)}
-                  ></i>
-                )}
-                <i
-                  className="fa-solid fa-trash fa-2x"
-                  onClick={() => deleteFromMap(item.id)}
-                ></i> */}
                 </p>
-              
-                {/* <button onClick={() => changeIconColor(item.id)}>{item.done === false ? <>Done</> : <>Uncheck</>}</button> */}
-                {/* <button onClick={() => deleteFromMap(item.id)}>Delete</button> */}
               </li>
             </div>
           );

@@ -4,8 +4,9 @@
   align-items: center;
   text-align: center;
   align-content: center;
+  
 }
 
-h3 {
-  margin-left: 100px;
+ul {
+  list-style: none;
 }

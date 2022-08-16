@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from "../hooks/useAppContext";
+import './ListItem.css';
 
 export const ListItem = (props) => {
   const { addToMap, selectedPlan } = useContext(AppContext);
@@ -23,10 +24,10 @@ export const ListItem = (props) => {
   return (
     <li>
       {props && (
-        <div>
-          <a href={props.results.url} target="_blank" rel="noopener noreferrer">{props.results.name}</a>
-          <p>{props.results.address}</p>
-          <p>
+        <div className="card-item">
+          <a href={props.results.url} target="_blank" rel="noopener noreferrer" style={{"fontSize":"20px", "fontWeight":"300"}}>{props.results.name}</a>
+          <p style={{"fontSize":"15px"}}>{props.results.address}</p>
+          <p style={{"fontSize":"15px"}}>
             Rating: {props.results.rating} ({props.results.review} reviews)
           </p>
           <a href={props.results.url} target="_blank" rel="noopener noreferrer">
