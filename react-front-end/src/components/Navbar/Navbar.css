@@ -1,5 +1,5 @@
 .navbar {
-  background-color: rgb(142, 214, 250);
+  background-color: #8ed6fa;
   display: flex;
   justify-content: space-between;
   position: sticky;
@@ -30,9 +30,10 @@
 
 .signOut {
   padding-right: 30px;
-  padding-bottom: 30 px;
+  margin-top: 60px;
   display: flex;
-  flex-direction:column;
+  flex-direction:row;
+  align-items: center;
   align-content:space-around;
   justify-content: flex-end;
   margin-bottom: 30px;
