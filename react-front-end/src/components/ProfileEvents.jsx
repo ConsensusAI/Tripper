@@ -28,12 +28,17 @@ export const ProfileEvents = (props) => {
   console.log("events >", events);
 
   return (
-    <div>
+    <div className="profileEvents">
       <ol>
       {events.map((item) => {
         return (
           <li plan_id={item.id}>
+            <p>
             {item.name}
+            <div>
+            {item.street_address}
+            </div>
+            </p>
           </li>
         );
       })}
